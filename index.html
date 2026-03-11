@@ -19,12 +19,10 @@
 <h2 class="logo">Pohaan Designer</h2>
 
 <ul>
-
 <li><a href="#about">About</a></li>
 <li><a href="#portfolio">Portfolio</a></li>
 <li><a href="#library">Books</a></li>
 <li><a href="#contact">Contact</a></li>
-
 </ul>
 
 </nav>
@@ -52,7 +50,7 @@
 
 <section id="portfolio">
 
-<h2>My Portfolio</h2>
+<h2>My Graphic Designs</h2>
 
 <div class="gallery">
 
@@ -76,23 +74,15 @@
 <div class="books">
 
 <div class="book">
-
 <img src="book1.jpg">
-
 <h3>Pashto Typing Guide</h3>
-
-<a href="book1.pdf" target="_blank" class="read">Read Online</a>
-
+<button onclick="openBook('book1.pdf')">Read Online</button>
 </div>
 
 <div class="book">
-
 <img src="book2.jpg">
-
 <h3>Graphic Design Basics</h3>
-
-<a href="book2.pdf" target="_blank" class="read">Read Online</a>
-
+<button onclick="openBook('book2.pdf')">Read Online</button>
 </div>
 
 </div>
@@ -115,6 +105,31 @@
 
 </footer>
 
-</body>
+<div id="reader">
 
+<span onclick="closeBook()">✖</span>
+
+<iframe id="bookFrame"></iframe>
+
+</div>
+
+<script>
+
+function openBook(book){
+
+document.getElementById("reader").style.display="block";
+document.getElementById("bookFrame").src=book;
+
+}
+
+function closeBook(){
+
+document.getElementById("reader").style.display="none";
+document.getElementById("bookFrame").src="";
+
+}
+
+</script>
+
+</body>
 </html>
