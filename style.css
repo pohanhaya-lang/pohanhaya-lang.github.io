@@ -1,16 +1,41 @@
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial;
 background:#f4f4f4;
 text-align:center;
 }
 
-/* Header */
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#111;
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+/* HEADER */
 
 header{
 background:#1e3a8a;
 color:white;
-padding:40px 20px;
+padding:60px 20px;
 }
 
 .profile{
@@ -18,22 +43,15 @@ width:150px;
 height:150px;
 border-radius:50%;
 border:5px solid white;
-margin-bottom:10px;
 }
 
-/* Sections */
+/* SECTION */
 
 section{
-padding:40px 20px;
+padding:50px 20px;
 }
 
-/* About */
-
-.about{
-background:white;
-}
-
-/* Portfolio */
+/* GALLERY */
 
 .gallery{
 display:grid;
@@ -54,13 +72,27 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* Contact */
+/* CONTACT */
 
-.contact{
+#contact{
 background:white;
 }
 
-/* Footer */
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FOOTER */
 
 footer{
 background:#111;
