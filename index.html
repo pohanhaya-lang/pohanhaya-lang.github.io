@@ -3,9 +3,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pohaan Mohammadkhil</title>
+<title>Pohaan Mohammadkhil | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -13,142 +13,177 @@
 
 <body>
 
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-<div class="sidebar" id="sidebar">
-
-<h2>Menu</h2>
-
-<a href="#">Home</a>
-<a href="#designs">Graphic Designs</a>
-<a href="#books">Books</a>
-<a href="#services">UI/UX Services</a>
-<a href="#contact">Contact</a>
-
-</div>
-
 <header>
 
-<h1>Pohaan Mohammadkhil</h1>
+<div class="logo">Pohaan</div>
 
-<p>Graphic Designer | Writer | Administrative Manager</p>
+<nav id="menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 </header>
 
-<section class="slider">
+<section id="home" class="hero">
 
-<img src="profile.jpg">
-<img src="Poster.png">
-<img src="Poster1.png">
-<img src="Poster3.png">
+<h1>Pohaan Mohammadkhil</h1>
 
-</section>
+<p>Graphic Designer • Writer • Administrative Management</p>
 
-<section id="designs">
+<a href="#portfolio" class="btn">View Portfolio</a>
 
-<h2>Graphic Designs</h2>
-
-<div class="gallery">
-
-<img src="Poster.png">
-<img src="Poster1.png">
-<img src="Poster3.png">
-<img src="Poster4.png">
-
-</div>
+<a href="#contact" class="btn2">Contact Me</a>
 
 </section>
 
-<section id="books">
 
-<h2>Books</h2>
+<section id="about">
 
-<div class="books">
+<h2>About Me</h2>
 
-<div class="book">
+<div class="about">
 
-<img src="book1.jpg">
+<img src="profile.jpg" onerror="this.src='https://via.placeholder.com/300'">
 
-<h3>Pashto Typing Guide</h3>
-
-<a href="book1.pdf" target="_blank">Read Online</a>
-
-</div>
+<p>
+I am a graphic designer and writer from Afghanistan with passion for visual storytelling,
+creative design and educational content creation. I specialize in poster design,
+branding, typing services and digital design projects.
+</p>
 
 </div>
 
 </section>
 
-<section id="services">
 
-<h2>UI / UX Services</h2>
+<section id="portfolio">
 
-<div class="services">
+<h2>Portfolio</h2>
 
-<div class="service">
-<h3>Website UI Design</h3>
-<p>Modern user interface design for websites.</p>
+<div class="portfolio-grid">
+
+<div class="project">
+<img src="Poster.png" onerror="this.src='https://via.placeholder.com/400'">
+<h3>Poster Design</h3>
 </div>
 
-<div class="service">
-<h3>UX Research</h3>
-<p>Improving user experience and usability.</p>
+<div class="project">
+<img src="Poster1.png" onerror="this.src='https://via.placeholder.com/400'">
+<h3>Digital Poster</h3>
 </div>
 
-<div class="service">
-<h3>Mobile App Design</h3>
-<p>Professional UI for Android and iOS apps.</p>
+<div class="project">
+<img src="Poster3.png" onerror="this.src='https://via.placeholder.com/400'">
+<h3>Graphic Artwork</h3>
+</div>
+
+<div class="project">
+<img src="Poster4.png" onerror="this.src='https://via.placeholder.com/400'">
+<h3>Course Poster</h3>
 </div>
 
 </div>
 
 </section>
+
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skill">
+
+<p>Graphic Design</p>
+<div class="bar"><span style="width:90%"></span></div>
+
+<p>Logo Design</p>
+<div class="bar"><span style="width:85%"></span></div>
+
+<p>Branding</p>
+<div class="bar"><span style="width:80%"></span></div>
+
+<p>Writing</p>
+<div class="bar"><span style="width:75%"></span></div>
+
+</div>
+
+</section>
+
+
+<section id="experience">
+
+<h2>Experience</h2>
+
+<div class="timeline">
+
+<div class="item">
+<h3>2022 – Present</h3>
+<p>Freelance Graphic Designer</p>
+</div>
+
+<div class="item">
+<h3>2021 – 2022</h3>
+<p>Content Writer</p>
+</div>
+
+</div>
+
+</section>
+
 
 <section id="contact">
 
 <h2>Contact</h2>
 
-<a class="whatsapp"
-href="https://wa.me/93786211440"
-target="_blank">WhatsApp</a>
+<form>
 
-<a class="facebook"
-href="https://www.facebook.com/profile.php?id=100090128451326"
-target="_blank">Facebook</a>
+<input type="text" placeholder="Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+<div class="social">
+
+<a href="https://wa.me/93786211440">WhatsApp</a>
+
+<a href="https://www.facebook.com/profile.php?id=100090128451326">Facebook</a>
+
+<a href="mailto:pohan.haya@gmail.com">Email</a>
+
+</div>
 
 </section>
+
+
+<footer>
+
+© 2026 Pohaan Mohammadkhil
+
+</footer>
+
 
 <script>
 
 function toggleMenu(){
-let menu=document.getElementById("sidebar");
 
-if(menu.style.left=="0px"){
-menu.style.left="-220px";
+let menu=document.getElementById("menu");
+
+if(menu.style.display=="block"){
+menu.style.display="none";
 }else{
-menu.style.left="0px";
+menu.style.display="block";
 }
-}
-
-let slideIndex=0;
-
-showSlides();
-
-function showSlides(){
-
-let slides=document.querySelectorAll(".slider img");
-
-slides.forEach(img=>img.style.display="none");
-
-slideIndex++;
-
-if(slideIndex>slides.length){
-slideIndex=1;
-}
-
-slides[slideIndex-1].style.display="block";
-
-setTimeout(showSlides,3000);
 
 }
 
