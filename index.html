@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Pohaan Mohammadkhil</title>
 
@@ -14,11 +13,25 @@
 
 <body>
 
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<div class="sidebar" id="sidebar">
+
+<h2>Menu</h2>
+
+<a href="#">Home</a>
+<a href="#designs">Graphic Designs</a>
+<a href="#books">Books</a>
+<a href="#services">UI/UX Services</a>
+<a href="#contact">Contact</a>
+
+</div>
+
 <header>
 
 <h1>Pohaan Mohammadkhil</h1>
 
-<p>Graphic Designer • Writer • Administrative Management</p>
+<p>Graphic Designer | Writer | Administrative Manager</p>
 
 </header>
 
@@ -31,7 +44,7 @@
 
 </section>
 
-<section>
+<section id="designs">
 
 <h2>Graphic Designs</h2>
 
@@ -41,14 +54,12 @@
 <img src="Poster1.png">
 <img src="Poster3.png">
 <img src="Poster4.png">
-<img src="Certificates.png">
-<img src="Cover Page.png">
 
 </div>
 
 </section>
 
-<section>
+<section id="books">
 
 <h2>Books</h2>
 
@@ -60,7 +71,7 @@
 
 <h3>Pashto Typing Guide</h3>
 
-<a href="book1.pdf" target="_blank">Read</a>
+<a href="book1.pdf" target="_blank">Read Online</a>
 
 </div>
 
@@ -68,17 +79,56 @@
 
 </section>
 
-<section>
+<section id="services">
+
+<h2>UI / UX Services</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>Website UI Design</h3>
+<p>Modern user interface design for websites.</p>
+</div>
+
+<div class="service">
+<h3>UX Research</h3>
+<p>Improving user experience and usability.</p>
+</div>
+
+<div class="service">
+<h3>Mobile App Design</h3>
+<p>Professional UI for Android and iOS apps.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
 
 <h2>Contact</h2>
 
-<a class="whatsapp" href="https://wa.me/93786211440" target="_blank">WhatsApp</a>
+<a class="whatsapp"
+href="https://wa.me/93786211440"
+target="_blank">WhatsApp</a>
 
-<a class="facebook" href="https://www.facebook.com/profile.php?id=100090128451326" target="_blank">Facebook</a>
+<a class="facebook"
+href="https://www.facebook.com/profile.php?id=100090128451326"
+target="_blank">Facebook</a>
 
 </section>
 
 <script>
+
+function toggleMenu(){
+let menu=document.getElementById("sidebar");
+
+if(menu.style.left=="0px"){
+menu.style.left="-220px";
+}else{
+menu.style.left="0px";
+}
+}
 
 let slideIndex=0;
 
@@ -92,7 +142,9 @@ slides.forEach(img=>img.style.display="none");
 
 slideIndex++;
 
-if(slideIndex>slides.length){slideIndex=1;}
+if(slideIndex>slides.length){
+slideIndex=1;
+}
 
 slides[slideIndex-1].style.display="block";
 
@@ -104,4 +156,3 @@ setTimeout(showSlides,3000);
 
 </body>
 </html>
-
