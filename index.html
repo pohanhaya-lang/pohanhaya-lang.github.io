@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -14,47 +14,24 @@
 
 <body>
 
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-<div class="sidebar" id="sidebar">
-
-<h2>Pohaan</h2>
-
-<input type="text" placeholder="Search..." class="search">
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-<li><a href="#portfolio">Graphic Designs</a></li>
-<li><a href="#books">Books</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</div>
-
-
-<div class="main">
-
-<section id="home">
+<header>
 
 <h1>Pohaan Mohammadkhil</h1>
 
-<p>Pashto Typing Specialist | Graphic Designer</p>
+<p>Graphic Designer • Writer • Administrative Management</p>
 
-<div class="slider">
+</header>
+
+<section class="slider">
 
 <img src="profile.jpg">
 <img src="Poster.png">
 <img src="Poster1.png">
 <img src="Poster3.png">
 
-</div>
-
 </section>
 
-
-<section id="portfolio">
+<section>
 
 <h2>Graphic Designs</h2>
 
@@ -71,8 +48,7 @@
 
 </section>
 
-
-<section id="books">
+<section>
 
 <h2>Books</h2>
 
@@ -84,17 +60,7 @@
 
 <h3>Pashto Typing Guide</h3>
 
-<button onclick="openBook('book1.pdf')">Read Book</button>
-
-</div>
-
-<div class="book">
-
-<img src="book2.jpg">
-
-<h3>Graphic Design Guide</h3>
-
-<button onclick="openBook('book2.pdf')">Read Book</button>
+<a href="book1.pdf" target="_blank">Read</a>
 
 </div>
 
@@ -102,73 +68,17 @@
 
 </section>
 
+<section>
 
-<section id="contact">
+<h2>Contact</h2>
 
-<h2>Contact Me</h2>
+<a class="whatsapp" href="https://wa.me/93786211440" target="_blank">WhatsApp</a>
 
-<a class="whatsapp" href="https://wa.me/93786211440" target="_blank">
-
-WhatsApp
-
-</a>
-
-<a class="facebook" href="https://www.facebook.com/profile.php?id=100090128451326" target="_blank">
-
-Facebook
-
-</a>
+<a class="facebook" href="https://www.facebook.com/profile.php?id=100090128451326" target="_blank">Facebook</a>
 
 </section>
-
-</div>
-
-
-<div id="reader">
-
-<span onclick="closeBook()">✖</span>
-
-<iframe id="bookFrame"></iframe>
-
-</div>
-
 
 <script>
-
-function toggleMenu(){
-
-let sidebar=document.getElementById("sidebar");
-
-if(sidebar.style.left=="0px"){
-
-sidebar.style.left="-250px";
-
-}else{
-
-sidebar.style.left="0px";
-
-}
-
-}
-
-
-function openBook(book){
-
-document.getElementById("reader").style.display="block";
-
-document.getElementById("bookFrame").src=book;
-
-}
-
-
-function closeBook(){
-
-document.getElementById("reader").style.display="none";
-
-document.getElementById("bookFrame").src="";
-
-}
-
 
 let slideIndex=0;
 
