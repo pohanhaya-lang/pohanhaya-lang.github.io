@@ -1,158 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+body{
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Pohaan Mohammadkhil</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-<div class="sidebar" id="sidebar">
-
-<h2>Menu</h2>
-
-<a href="#">Home</a>
-<a href="#designs">Graphic Designs</a>
-<a href="#books">Books</a>
-<a href="#services">UI/UX Services</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-<header>
-
-<h1>Pohaan Mohammadkhil</h1>
-
-<p>Graphic Designer | Writer | Administrative Manager</p>
-
-</header>
-
-<section class="slider">
-
-<img src="profile.jpg">
-<img src="Poster.png">
-<img src="Poster1.png">
-<img src="Poster3.png">
-
-</section>
-
-<section id="designs">
-
-<h2>Graphic Designs</h2>
-
-<div class="gallery">
-
-<img src="Poster.png">
-<img src="Poster1.png">
-<img src="Poster3.png">
-<img src="Poster4.png">
-
-</div>
-
-</section>
-
-<section id="books">
-
-<h2>Books</h2>
-
-<div class="books">
-
-<div class="book">
-
-<img src="book1.jpg">
-
-<h3>Pashto Typing Guide</h3>
-
-<a href="book1.pdf" target="_blank">Read Online</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="services">
-
-<h2>UI / UX Services</h2>
-
-<div class="services">
-
-<div class="service">
-<h3>Website UI Design</h3>
-<p>Modern user interface design for websites.</p>
-</div>
-
-<div class="service">
-<h3>UX Research</h3>
-<p>Improving user experience and usability.</p>
-</div>
-
-<div class="service">
-<h3>Mobile App Design</h3>
-<p>Professional UI for Android and iOS apps.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<a class="whatsapp"
-href="https://wa.me/93786211440"
-target="_blank">WhatsApp</a>
-
-<a class="facebook"
-href="https://www.facebook.com/profile.php?id=100090128451326"
-target="_blank">Facebook</a>
-
-</section>
-
-<script>
-
-function toggleMenu(){
-let menu=document.getElementById("sidebar");
-
-if(menu.style.left=="0px"){
-menu.style.left="-220px";
-}else{
-menu.style.left="0px";
-}
-}
-
-let slideIndex=0;
-
-showSlides();
-
-function showSlides(){
-
-let slides=document.querySelectorAll(".slider img");
-
-slides.forEach(img=>img.style.display="none");
-
-slideIndex++;
-
-if(slideIndex>slides.length){
-slideIndex=1;
-}
-
-slides[slideIndex-1].style.display="block";
-
-setTimeout(showSlides,3000);
+margin:0;
+font-family:Arial;
+background:#F8FAFC;
+color:#111827;
 
 }
 
-</script>
+header{
 
-</body>
-</html>
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#1E3A8A;
+color:white;
+
+}
+
+nav a{
+
+color:white;
+margin:0 10px;
+text-decoration:none;
+
+}
+
+.menu-btn{
+
+display:none;
+font-size:25px;
+cursor:pointer;
+
+}
+
+.hero{
+
+text-align:center;
+padding:100px 20px;
+background:#0EA5E9;
+color:white;
+
+}
+
+.btn{
+
+background:white;
+color:#1E3A8A;
+padding:10px 20px;
+margin:10px;
+text-decoration:none;
+border-radius:6px;
+
+}
+
+.btn2{
+
+background:#22C55E;
+color:white;
+padding:10px 20px;
+margin:10px;
+text-decoration:none;
+border-radius:6px;
+
+}
+
+section{
+
+padding:60px 20px;
+text-align:center;
+
+}
+
+.about{
+
+display:flex;
+gap:30px;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+
+}
+
+.about img{
+
+width:250px;
+border-radius:10px;
+
+}
+
+.portfolio-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+.project img{
+
+width:100%;
+border-radius:10px;
+
+}
+
+.bar{
+
+background:#ddd;
+height:10px;
+border-radius:10px;
+margin-bottom:20px;
+
+}
+
+.bar span{
+
+display:block;
+height:10px;
+background:#22C55E;
+border-radius:10px;
+
+}
+
+.timeline{
+
+max-width:600px;
+margin:auto;
+
+}
+
+.item{
+
+background:white;
+margin:10px 0;
+padding:20px;
+border-radius:10px;
+
+}
+
+form{
+
+max-width:400px;
+margin:auto;
+
+}
+
+input, textarea{
+
+width:100%;
+padding:10px;
+margin:10px 0;
+
+}
+
+button{
+
+background:#0EA5E9;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+
+}
+
+.social a{
+
+margin:10px;
+text-decoration:none;
+color:#1E3A8A;
+
+}
+
+footer{
+
+text-align:center;
+padding:20px;
+background:#1E3A8A;
+color:white;
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+display:none;
+flex-direction:column;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
+
+}
